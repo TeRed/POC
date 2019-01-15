@@ -55,7 +55,7 @@ for i = 1:YY
 end
 
 figure;
-imshow(I,[]);
+imshow(label2rgb(I),[]);
 
 function index = root(index, id)
     while id(index) ~= index

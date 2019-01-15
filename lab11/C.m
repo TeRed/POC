@@ -42,7 +42,7 @@ cross = labeled;
 for i = 1:YY
    for j = 1:XX
        piksel = cross(i,j);
-       if (piksel ~= 0 && ~(wsp(piksel,2) > 0.55o && wsp(piksel,2) < 0.66))
+       if (piksel ~= 0 && ~(wsp(piksel,2) > 0.55 && wsp(piksel,2) < 0.66))
            cross(i,j) = 0;
        end
    end
