@@ -33,6 +33,8 @@ L_E(:,:,3) = lB_E;
 figure;
 imshow(L_E);
 
+%%
+
 hsvL = rgb2hsv(L);
 
 hsvL(:,:,3) = histeq(hsvL(:,:,3), 256);

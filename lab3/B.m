@@ -10,6 +10,8 @@ P1 = histeq(P);
 figure;
 imshow(P1);
 
+%%
+
 load histogramZadany;
 
 figure;
@@ -18,6 +20,8 @@ plot(histogramZadany);
 P2 = histeq(P, histogramZadany);
 figure;
 imshow(P2);
+
+%%
 
 P3 = imadjust(P);
 figure;

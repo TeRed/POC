@@ -3,22 +3,28 @@ clearvars;
 clc;
 
 I = imread('src/lab112.png');
-I = im2bw(I, 0.13);
+I = im2bw(I, 35/255);
 
-se = strel('square',3);
-I = imdilate(I,[1 1 1; 1 1 1; 1 1 1]);
-I = imopen(I,[1 1 1; 1 1 1; 1 1 1]);
-I = imerode(I,[1 1 1; 1 1 1; 1 1 1]);
+I = imdilate(I,strel('line', 5, 0));
+I = imdilate(I,[0 1 0; 1 1 1; 0 1 0]);
 
-[H, theta, rho] = hough(edge(I, 'sobel'));
+figure;
+subplot(1,2,1);
+imshow(imread('src/lab112.png'));
+subplot(1,2,2);
+imshow(I);
 
-Max = houghpeaks(H, 8);
+%%
+
+[H, theta, rho] = hough(edge(I, 'canny'));
+
+Max = houghpeaks(H, 12);
 
 figure;
 subplot(1,3,1);
 imshow(I);
 subplot(1,3,2);
-imshow(edge(I, 'sobel'));
+imshow(edge(I, 'canny'));
 subplot(1,3,3);
 imshow(H, []);
 hold on;

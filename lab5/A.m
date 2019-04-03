@@ -40,7 +40,7 @@ imshow(I);
 subplot(1,3,2);
 imshow(I_Filter);
 subplot(1,3,3);
-imshow(imabsdiff(I,I_Filter),[]);
+imshow(imabsdiff(I,I_Filter), []);
 
 %%
 

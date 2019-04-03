@@ -2,6 +2,8 @@ close all;
 clearvars;
 clc;
 
+%%
+
 I = imread('src/ertka.bmp');
 
 Out = imerode(I, strel('square', 3));
@@ -14,6 +16,8 @@ imshow(I);
 subplot(1,2,2);
 imshow(Out);
 
+%%
+
 I = imread('src/buzka.bmp');
 
 Out = imerode(I, [1,0,1;0,1,0;1,0,1]);
@@ -24,6 +28,8 @@ imshow(I);
 subplot(1,2,2);
 imshow(Out);
 
+%%
+
 I = imread('src/ertka.bmp');
 
 Out = imdilate(I, strel('square',3));
@@ -33,6 +39,8 @@ subplot(1,2,1);
 imshow(I);
 subplot(1,2,2);
 imshow(Out);
+
+%%
 
 I = imread('src/ertka.bmp');
 M = strel('square',3);
@@ -59,6 +67,8 @@ subplot(1,2,1);
 imshow(I);
 subplot(1,2,2);
 imshow(Out);
+
+%%
 
 I = imread('src/hom.bmp');
 SE1 = [0 1 0; 1 1 1; 0 1 0];

@@ -12,6 +12,8 @@ figure;
 title('Hough');
 imshow(H, []);
 
+%%
+
 I(1,1) = 1;
 
 [H, ~, ~] = hough(I,'RhoResolution',0.1,'ThetaResolution',0.5);
@@ -20,13 +22,15 @@ figure;
 title('Hough 2');
 imshow(H, []);
 
+%%
+
 I(3,4) = 1;
 I(10,10) = 1;
 
 [H, theta, rho] = hough(I,'RhoResolution',0.1,'ThetaResolution',0.5);
 
 figure;
-title('Hough 2');
+title('Hough 3');
 imshow(H, []);
 
 th = theta(91);

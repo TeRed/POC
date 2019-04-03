@@ -4,15 +4,15 @@ clc;
 
 I = imread('src/kwadraty.png');
 
-[H, theta, rho] = hough(edge(I, 'sobel'));
+[H, theta, rho] = hough(edge(I, 'canny'));
 
-Max = houghpeaks(H, 8)
+Max = houghpeaks(H, 8, 'Threshold', 0.82*max(H(:)), 'NHoodSize', [55 55]);
 
 figure;
 subplot(1,3,1);
 imshow(I);
 subplot(1,3,2);
-imshow(edge(I, 'sobel'));
+imshow(edge(I, 'canny'));
 subplot(1,3,3);
 imshow(H, []);
 hold on;

@@ -21,9 +21,9 @@ figure;
 subplot(1,3,1);
 imshow(I);
 subplot(1,3,2);
-imshow(I_Filter, []);
+imshow(I_Filter);
 subplot(1,3,3);
-imshow(I_Filter_2, []);
+imshow(I_Filter_2);
 
 function s(I,M)
     I_Filter = conv2(I,M,'same');
@@ -32,9 +32,9 @@ function s(I,M)
     subplot(1,3,1);
     imshow(I);
     subplot(1,3,2);
-    imshow(I_Filter + 128, []);
+    imshow(I_Filter + 128);
     title('+128');
     subplot(1,3,3);
-    imshow(abs(I_Filter), []);
+    imshow(abs(I_Filter));
     title('abs');
 end

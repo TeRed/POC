@@ -40,7 +40,7 @@ for i = 1:index
    
    IBDiff = imdiff(IBD, IB);
    
-   neighs = unique(nonzeros(IB .* segRes));
+   neighs = unique(nonzeros(IBDiff .* segRes));
    
    flaga = 0;
    

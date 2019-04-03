@@ -14,6 +14,8 @@ imshow(bwmorph(I, 'thin', 2));
 subplot(2,2,4);
 imshow(bwmorph(I, 'thin', Inf));
 
+%%
+
 I = imread('src/kosc.bmp');
 
 figure(2);
@@ -21,6 +23,8 @@ subplot(1,2,1);
 imshow(I);
 subplot(1,2,2);
 imshow(bwmorph(I, 'skel', Inf));
+
+%%
 
 I = imread('src/text.bmp');
 Out = imopen(I, ones(51,1));
